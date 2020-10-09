@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../icon/iconfont.css">
+
+
+</head>
+<style>
+    html{
+        font-size: 100px;
+    }
+    body{
+        color: #000000;
+    }
+    .head{
+        width: 12rem;
+        height: 1.7rem;
+        margin: 0 auto;
+        font-size: 0.24rem;
+
+    }
+    .logo{
+        margin-top:0.7rem;
+        position: fixed;
+    }
+    .logo img{
+        height: 1rem;
+    }
+    .navbar{
+        position: relative;
+        margin-left: 2rem;
+        height: 0.3rem;
+        margin-top:1.3rem;
+    }
+    .nav{
+
+    }
+    .nav>li{
+        float: left;
+        margin-left: 0.3rem;
+        line-height: 0.3rem;
+    }
+    .nav>li:hover{
+        font-weight: bold;
+    }
+    .search{
+        width: 1.5rem;
+        height: 0.3rem;
+        font-size: 0.16rem;
+        text-align: center;
+        background: white;
+        border-radius: 0.1rem;
+        position: absolute;
+        left: 60%;
+        top: 5%;
+
+        border: 0.01rem solid #000000;
+    }
+
+    .searchText,.searchBtn{
+        height: 0.28rem;
+        border:none;
+        text-align: center;
+        background: none;
+
+    }
+    .searchText{
+        width: 1.1rem;
+    }
+    .searchBtn{
+        width: 0.3rem;
+        background: none;
+
+    }
+    #toggler{
+        display: none;
+    }
+    .navR {
+      margin-top: -0.3rem;
+        float: right;
+}
+    .navRight>li{
+       float: left;
+        margin-left: 0.3rem;
+        width: 0.2rem;
+       height: 0.2rem;
+    }
+    .search:hover{
+        box-shadow: 5px 5px 5px #000000;
+    }
+    .hamburger-container{
+      display: none;
+
+  }
+
+    @media screen and (max-width: 750px) {
+        .head {
+            width: 100%;
+            height: 0.4rem;
+            margin: 0 auto;
+            font-size: 0.16rem;
+
+        }
+        .logo {
+            position: fixed;
+            margin-top: 0;
+            text-align: center;
+        }
+        .logo img {
+            height: 20%;
+            width: 20%;
+        }
+
+        .navbar {
+            display: none;
+        }
+        .search {
+        display: none;
+        }
+        .navR {
+            right: 0;
+            margin-top: -0.1rem;
+        }
+        .navRight>li{
+            float: left;
+            margin-left: 0.2rem;
+            width: 0.16rem;
+            height: 0.16rem;
+        }
+
+        .hamburger-container {
+            margin-top: 10%;
+            display: block;
+            width: 20px;
+            height: 15px;
+        }
+
+        .hamburger-container span {
+            display: block;
+            height: 3px;
+            background-color: black;
+            position: relative;
+            transition: transform .3s ease-in-out, top .3s ease-in-out .3s, opacity .01s linear .3s;
+            top: 0;
+            opacity: 1;
+        }
+
+        .hamburger-container span:nth-child(2) {
+            margin: 5px 0;
+        }
+
+        #toggler:checked ~ label .hamburger-container span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 5px;
+            transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+        }
+
+        #toggler:checked ~ label .hamburger-container span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: -10px;
+            transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+        }
+
+        #toggler:checked ~ label .hamburger-container span:nth-child(2) {
+            opacity: 0;
+            transition: opacity .01s linear .3s;
+        }
+
+        #toggler {
+            display: none;
+        }
+    }
+
+</style>
+<body>
+<div class="head">
+    <div class="logo"><a href=""><img src="../images/9.png" alt=""></a></div>
+    <div class="clears"></div>
+    <div class="navbar" >
+        <ul class="nav">
+            <li>当季新品</li>
+            <li>女鞋</li>
+            <li>男鞋</li>
+            <li>童鞋</li>
+            <li>品牌动态</li>
+        </ul>
+        <div class="clears"></div>
+        <div class="search">
+            <input type="text" class="searchText" id="" placeholder="搜索">
+            <button class="iconfont icon-sousuo searchBtn"></button>
+        </div>
+        <!--ul.fangyuan>li*3-->
+        <!--ul>li.item$*5-->
+    </div>
+
+    <input type="checkbox" id="toggler">
+
+    <label for="toggler">
+        <div class="hamburger-container">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </label>
+
+    <div class="navR">
+        <ul class="navRight ">
+            <li ><i class="iconfont icon-yonghu"></i></li>
+            <li ><i class="iconfont icon-gouwuche1 "></i></li>
+            <li><i class="iconfont icon-dianhua1 "></i></li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>
