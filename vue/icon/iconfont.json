@@ -1,0 +1,72 @@
+{
+  "id": "1767247",
+  "name": "icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16888266",
+      "name": "购物车",
+      "font_class": "gouwuche1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "412950",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "10286660",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "10301895",
+      "name": "邮件",
+      "font_class": "youjian",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13341250",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "13774247",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "14729267",
+      "name": "电  话",
+      "font_class": "dianhua1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "2119425",
+      "name": "暂停",
+      "font_class": "suspend_icon",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "12625639",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e6ae",
+      "unicode_decimal": 59054
+    }
+  ]
+}
