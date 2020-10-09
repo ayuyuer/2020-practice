@@ -1,0 +1,14 @@
+/* CSS Document */
+*{ margin:0; padding:0;}
+img{border:none;}
+ul,li,ol{ list-style:none;}
+a{ text-decoration:none;}
+.clears{
+    clear:both;
+    height:0;
+    line-height:0;
+    overflow:hidden;
+    font-size:0;}
+.left{ float:left;}
+.right{ float:right;}
+body{font-size:12px; font-family:Arial, Verdana,"微软雅黑","宋体"; color:#6b6b6b;}
