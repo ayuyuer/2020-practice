@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+</head>
+<style>
+    html{
+        font-size: 100px;
+    }
+    .fix {
+        position:fixed;
+        top:0;
+        left:0;
+        font-size: 0.24rem; width:100%;background: #4cae4c; opacity: 0.7;
+    }
+
+    .hh{
+        width: 5rem; height: 3rem; background: #6bb2ff; text-align: center; margin-left: auto; margin-right: auto;
+    }
+    .ha{
+        font-size: 0.24rem; width:100%;background: #4cae4c; opacity: 0.7;
+    }
+    .hh>img{
+        height:2rem;
+    }
+    .box>p{
+        width: 3rem;
+        height: 2rem;
+        background: #6b6b6b;
+        font-size: 0.16rem;
+        color: white;
+        text-align: center;
+        line-height: 2rem;
+    }
+    .box{
+        margin-right: auto;
+        margin-left: auto;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+    }
+    .back{
+        position: fixed;
+        right: 2rem;
+        bottom: 1rem;
+        display: none;
+    }
+    .back>input{
+        background: #4cae4c;
+        width: 0.3rem;
+        height: 0.3rem;
+        color: white;
+        border: none;
+    }
+    /*最大宽度为750*/
+    @media screen and (max-width: 750px){
+     .hh{
+         text-align: center;
+         margin-left: auto;
+         margin-right: auto;
+         width: 100%;
+         height: 100%;
+
+     }
+        .ha{
+            font-size: 0.24rem;
+            width:100%;
+            background: #4cae4c;
+            opacity: 0.7;
+        }
+
+        .hh>img{
+            width: 100%;
+            height: 100%;
+        }
+        .box{
+           width: 100%;
+            display: inline-block;
+
+        }
+        .box>p{
+            margin-left: auto;
+            margin-right: auto;
+            width: 1.5rem;
+            height: 1rem;
+            margin-top: 20px;
+            background: #6b6b6b;
+            font-size: 0.16rem;
+            color: white;
+            text-align: center;
+            line-height: 1.2rem;
+        }
+        .back{
+            position: fixed;
+            right: 20%;
+            bottom: 1rem;
+            display: none;
+        }
+    }
+</style>
+<body>
+<p class="ha" id="nav" >hhhhhhhh</p>
+
+<div class="hh" >
+    <img src="../images/9.png">
+</div>
+<div class="box">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+<p>12</p>
+
+<div class="back" id="go">
+    <input type="button" value="top">
+</div>
+
+</body>
+<script type="text/javascript">
+    let tit = document.getElementById("nav");
+    let goTop =document.getElementById("go");
+    //alert(tit);
+    //占位符的位置
+    let rect = tit.getBoundingClientRect();//获得页面中导航条相对于浏览器视窗的位置
+    let inser = document.createElement("div");
+    tit.parentNode.replaceChild(inser,tit);
+    inser.appendChild(tit);
+    inser.style.height = rect.height + "px";
+
+    //获取距离页面顶端的距离
+    let titleTop = tit.offsetTop;
+    //滚动事件
+    document.onscroll = function(){
+        //获取当前滚动的距离
+        let btop = document.body.scrollTop||document.documentElement.scrollTop;
+        //如果滚动距离大于导航条据顶部的距离
+        if(btop>titleTop){
+            //为导航条设置fix
+            tit.className="fix";
+        }else{
+            //移除fixed
+            tit.className="ha" ;
+        }
+        window.onscroll =function(){
+            let scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+            if(scrolltop >100){
+                goTop.style.display ="block";
+            }else{
+                goTop.style.display ="none";
+            }
+        };
+       /* goTop.onclick =function(){
+            // 第一种方法：直接改变滚动条的位置
+            document.documentElement.scrollTop = document.body.scrollTop =0;
+
+            // 使用scrollTo方法，可把内容滚动到指定的坐标  谷歌不兼容
+            // let win =document.documentElement || document.body;
+            // win.scrollTo(0,0);
+        }*/
+        goTop.onclick =function(){
+            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            let speed = 30;//定义一个速度，即每隔30毫秒走多少px
+            myTimer = setInterval(function () {
+
+                document.documentElement.scrollTop = document.documentElement.scrollTop - speed;
+                //如果scroll的滚动值为0，也就是到达了页面顶部，需要停止定时器
+                if(document.documentElement.scrollTop<=0){
+                    clearInterval(myTimer)
+                }
+            },30)
+        };
+    }
+</script>
+</html>
