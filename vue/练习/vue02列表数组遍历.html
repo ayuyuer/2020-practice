@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in movies">{{item}}</li>
+    </ul>
+</div>
+
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    //let变量 const常量
+    const app = new Vue({
+        el:'#app',//用于挂载要管理的元素
+        data:{//定义数据
+            message:"hello,world",
+            movies:['阿凡达','星际穿越','皮卡丘','西游记']
+        }
+    })
+</script>
+</html>
