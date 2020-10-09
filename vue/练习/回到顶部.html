@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>回到顶部</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/backTop.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+
+</head>
+<body >
+<div class="page">1</div>
+<div class="page">2</div>
+<div class="page">3</div>
+<div class="page">4</div>
+<div class="page">5</div>
+<div id="back-to-top" class="back-to-top" @click="backToTop" v-show="backTopShow" v-cloak>
+    <span>回到</span>
+    <span>顶部</span>
+</div>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/backTop.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>
